@@ -2,10 +2,12 @@ love = require('love')
 require('screens')
 
 function love.load()
+	-- save the pixels
+	love.graphics.setDefaultFilter("nearest", "nearest")
+
 	GameState = "menu"
 	_upd = upd_menu
 	_drw = drw_menu
-	print("Game is working...")
 end
 
 function love.update(dt)
@@ -13,6 +15,7 @@ function love.update(dt)
 end
 
 function love.draw()
+	love.graphics.scale(4,4)
 	_drw()
 end
 
@@ -22,6 +25,7 @@ function love.keypressed(key)
 	if GameState == "menu" then
 		if key == 'space' then
 			GameState = "game"
+			load_game()
 			_upd = upd_game
 			_drw = drw_game
 		end
@@ -29,6 +33,7 @@ function love.keypressed(key)
 		if key == "return" then
 			_upd = upd_menu
 			_drw = drw_menu
+			print(Player.width)
 			GameState = "menu"
 		end
 	end
