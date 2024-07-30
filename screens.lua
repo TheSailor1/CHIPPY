@@ -6,9 +6,10 @@ end
 
 function drw_menu()
 	love.graphics.clear(.2,.2,.2)
-	love.graphics.print("MENU",
-		love.graphics.getWidth() / 2,
-		love.graphics.getHeight() /2)
+
+	love.graphics.setColor(1,1,1)
+
+	love.graphics.print("CHIPPY!", 60, 60)
 end
 
 function load_game()

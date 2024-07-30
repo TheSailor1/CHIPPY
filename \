@@ -4,11 +4,6 @@ require('screens')
 function love.load()
 	-- save the pixels
 	love.graphics.setDefaultFilter("nearest", "nearest")
-	Scale = 4
-	windowHeight = love.graphics.getHeight()
-	windowWidth = love.graphics.getWidth()
-	windowCenterX = windowWidth / 2 / Scale
-	windowCenterY = windowHeight / 2 / Scale
 
 	GameState = "menu"
 	_upd = upd_menu
@@ -21,7 +16,7 @@ end
 
 function love.draw()
 	-- scale pixels up before everything draws
-	love.graphics.scale(Scale,Scale)
+	love.graphics.scale(4,4)
 
 	_drw()
 end
