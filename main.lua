@@ -1,10 +1,10 @@
 love = require('love')
 require('screens')
+require("tools")
 
 function love.load()
 	-- save the pixels
 	love.graphics.setDefaultFilter("nearest", "nearest")
-	Scale = 4
 	windowHeight = love.graphics.getHeight()
 	windowWidth = love.graphics.getWidth()
 	windowCenterX = windowWidth / 2 / Scale
@@ -16,7 +16,7 @@ function love.load()
 end
 
 function love.update(dt)
-	_upd()
+	_upd(dt)
 end
 
 function love.draw()

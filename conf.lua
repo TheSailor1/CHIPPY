@@ -1,6 +1,7 @@
 function love.conf(t)
+	Scale = 4
 	t.title = "CHIPPY"
-	t.window.width = 640 -- 160 * 4
-	t.window.height = 576 -- 144 * 4
+	t.window.width = 160 * Scale 
+	t.window.height = 144 * Scale
 	t.console = true
 end

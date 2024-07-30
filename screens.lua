@@ -17,6 +17,7 @@ function load_game()
 end
 
 function upd_game(dt)
+	Player:update(dt)
 end
 
 function drw_game()
