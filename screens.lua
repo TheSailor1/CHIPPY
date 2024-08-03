@@ -9,7 +9,7 @@ function drw_menu()
 
 	love.graphics.setColor(1,1,1)
 
-	love.graphics.print("CHIPPY!", 60, 60)
+	love.graphics.print("CHIPPY!", 60, 60, 0, 2.5 / Scale, 2.5 / Scale)
 end
 
 function load_game()
